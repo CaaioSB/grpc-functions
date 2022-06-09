@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package math;
+
+// The sum service definition.
+service Math {
+  // Basic operations
+  rpc Sum (SumRequest) returns (SumResponse) {}
+}
+
+// The request message containing the two numbers that need to be added.
+message SumRequest {
+  float firstNumber = 1;
+  float secondNumber = 2;
+}
+
+// The response message containing a personalized message and two numbers added.
+message SumResponse {
+  string message = 1;
+  float response = 2;
+}
